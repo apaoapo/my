@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <!--必要样式-->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/less.css"/>
+
+
+</head>
+<body>
+    <div id="fullpage">
+    <div class="section first sctive">
+        <div class="first-fu">
+            <div class="first-ful"></div>
+            <div class="first-fur"></div>
+        </div>
+
+        <div class="book preserve-3d">
+            <!-- 书的最后一页 -->
+            <div class="book-page-box book-page-4 preserve-3d">
+
+                <div class="book-page page-front">
+                    <div class="first-box">
+
+                        <p>人生充满着期待，梦想连接着未来</p>
+                        <p>我是古嘉豪</p>
+                        <p>24岁</p>
+                        <p>我要成为一名全能设计师</p>
+                        <p>邮箱：yyshi@126.com</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <!-- 书的封面 -->
+            <div class="book-page-box book-page-1 preserve-3d flip-animation-1">
+                <div class="book-page page-front">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <!--第二屏-->
+    <div class="section two">
+        <!--外背景图-->
+        <div class="two-tu">
+        </div>
+        <!--转的-->
+        <div class="two1">
+            <div class="two-in">
+
+            </div>
+        </div>
+        <!--内容、-->
+       <div class="two-ji1">
+           <p>我的技能</p>
+           <p>&#xe63d;熟练掌握HTML</p>
+           <p>&#xe63d;熟练掌握CSS</p>
+           <p>&#xe63d;熟练掌握JS</p>
+           <p>&#xe63d;熟练掌握Jqery</p>
+       </div>
+
+    </div>
+        <!--第三屏-->
+    <div class="section three">
+        <!-- 代码部分begin -->
+        <div class="container demo-1">
+            <div class="content">
+                <div id="large-header" class="large-header">
+                    <canvas id="demo-canvas"></canvas>
+                    <h1 class="main-title"> <span class="thin">自我评价 简历。。。。</span></h1>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+        <!--第四屏-->
+    <div class="section four">
+        <div class="cssBox">
+            <div class="borderRadius">
+                <div class="lfRaidus">
+                    <div class="ctRaidus"></div>
+                </div>
+                <div class="rtRaidus">
+                    <div class="ctRaidus"></div>
+                    <div class="hfPoint"></div>
+                    <div class="rtPoint"></div>
+                </div>
+            </div>
+            <div class="imageRadius">
+                <img src="images/1.png" width="100%" alt="">
+            </div>
+            <div class="waveRaidus">
+                <img src="images/1.png" width="100%" alt="">
+            </div>
+            <div class="pointRadius">
+                <img src="images/2.png" width="100%" alt="">
+            </div>
+
+        </div>
+        <div class="four-in">
+            <p>联系方式。。。。</p>
+        </div>
+
+    </div>
+</div>
+    <script src='js/jquery.min.js'></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/rAF.js"></script>
+    <script src="js/demo-1.js"></script>
+
+
+
+    <script src="js/jquery.fullPage.min.js"></script>
+
+    <script>
+
+
+        $('#fullpage').fullpage({
+
+
+            afterLoad: function (anchorLink, index) {
+                $('.section').removeClass('current');
+
+                // 延时100毫秒执行
+                setTimeout(function () {
+                    $('.section').eq(index - 1).addClass('current');
+                }, 100);
+            }
+        });
+
+
+    </script>
+
+</body>
+</html>
